@@ -1,0 +1,39 @@
+<!-- Task 1: Looping with Increment using a Function -->
+<?php
+function printEvenNumbersForLoop($start, $end, $step) {
+    for ($i = $start + 1; $i <= $end; $i += $step) {
+        echo $i;
+        if ($i + $step <= $end) {
+            echo ', ';
+        }
+    }
+}
+function printEvenNumbersWhileLoop($start, $end, $step) {
+    $i = $start + 1;
+    while ($i <= $end) {
+        echo $i;
+        if ($i + $step <= $end) {
+            echo ', ';
+        }
+        $i += $step;
+    }
+}
+function printEvenNumbersDoWhileLoop($start, $end, $step) {
+    $i = $start + 1;
+    do {
+        echo $i;
+        if ($i + $step <= $end) {
+            echo ', ';
+        }
+        $i += $step;
+    } while ($i <= $end);
+}
+
+echo "Using for loop: ";
+printEvenNumbersForLoop(1, 20, 2);
+echo "\nUsing while loop: ";
+printEvenNumbersWhileLoop(1, 20, 2);
+echo "\nUsing do while loop: ";
+printEvenNumbersDoWhileLoop(1, 20, 2);
+
+?>

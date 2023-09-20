@@ -1,0 +1,19 @@
+<!-- Task 4: Fibonacci Series printing using a Function -->
+<?php
+function printFibonacci($count) {
+    $previous = 0;
+    $current = 1;
+
+    echo "Fibonacci series (first $count numbers): ";
+
+    for ($i = 0; $i < $count; $i++) {
+        echo $current . " ";
+
+        $next = $previous + $current;
+
+        $previous = $current;
+        $current = $next;
+    }
+}
+printFibonacci(15);
+?>
